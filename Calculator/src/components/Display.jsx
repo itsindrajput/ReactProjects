@@ -1,12 +1,12 @@
 const Display = ({ display }) => {
   return (
-    <div>
+    <div className="calculator-display">
       <input
         type="text"
-        placeholder="Calculate Here!"
+        placeholder="0"
         readOnly
         value={display}
-        style={{ width: "40%", height: "50px" }}
+        className="display-input"
       />
     </div>
   );

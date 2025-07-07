@@ -1,32 +1,36 @@
 import { useState } from "react";
-import Header from "./componets/Header";
-import Footer from "./componets/Footer";
-import Display from "./componets/Display";
-import ButtonContainer from "./componets/ButtonContainer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Display from "./components/Display";
+import ButtonContainer from "./components/ButtonContainer";
+import "./App.css";
 
 const App = () => {
   const [calvalue, setCalValue] = useState("");
 
   const onHandle = (item) => {
-    if ("C" === item) {
-      setCalValue(" ");
-    } else if ("=" === item) {
-      const result = eval(calvalue);
-      setCalValue(result);
+    if (item === "C") {
+      setCalValue("");
+    } else if (item === "=") {
+      try {
+        const result = eval(calvalue);
+        setCalValue(result.toString());
+      } catch (error) {
+        setCalValue("Error");
+      }
     } else {
-      const numValue = calvalue + item;
-      setCalValue(numValue);
+      setCalValue((prev) => prev + item);
     }
   };
 
   return (
     <>
-      <Header></Header>
-      <center style={{ margin: "50px" }}>
-        <Display display={calvalue}></Display>
-        <ButtonContainer handle={onHandle}></ButtonContainer>
-      </center>
-      <Footer></Footer>
+      <Header />
+      <div className="calculator-container">
+        <Display display={calvalue} />
+        <ButtonContainer handle={onHandle} />
+      </div>
+      <Footer />
     </>
   );
 };
