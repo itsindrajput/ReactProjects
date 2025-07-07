@@ -1,12 +1,42 @@
-# React + Vite
+# 🧮 React Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, responsive, and modern calculator built using **React**. It includes a fully functional calculator UI with a clean layout, responsive header and footer, and support for basic arithmetic operations.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Basic operations: Addition, Subtraction, Multiplication, Division
+- Responsive UI for all screen sizes
+- Modern design using React and CSS (no Bootstrap)
+- Clean layout with reusable components
+- Header with navigation and footer with social icons
 
-## Expanding the ESLint configuration
+## 🖼️ Screenshot
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Screenshot 2025-07-07 195255](https://github.com/user-attachments/assets/1f7e3f72-cebb-409d-a194-2273cda3ddf4)
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/itsindrajput/ReactProjects/Calculator.git
+cd Calculator
+npm install
+npm run dev
+```
+
+## 📁 Project Structure
+
+```
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Display.jsx
+│   │   └── ButtonContainer.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── public/
+│   └── index.html
+├── screenshot.png
+└── README.md
+```
