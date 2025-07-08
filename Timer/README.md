@@ -23,6 +23,8 @@ A simple and responsive timer application built with React. It uses the `useRef`
 
 ## 📸 Screenshot
 
+![Timer](https://github.com/user-attachments/assets/28908673-74b0-4e2c-98b1-3958e73a5063)
+
 ---
 
 ## 📂 How to Run
