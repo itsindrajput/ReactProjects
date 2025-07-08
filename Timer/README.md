@@ -1,12 +1,48 @@
-# React + Vite
+# ⏱ React Timer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive timer application built with React. It uses the `useRef`, `useState`, and `useEffect` hooks to demonstrate core React concepts with a clean UI design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Start, Pause, and Reset functionality
+- Auto-focus input field using `useRef`
+- Clean, responsive UI with modern CSS
+- Mobile-first design with gradient buttons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+- React (Vite)
+- JavaScript (ES6+)
+- CSS (Mobile-First & Responsive)
+
+---
+
+## 📸 Screenshot
+
+---
+
+## 📂 How to Run
+
+```bash
+# Clone the repository
+git clone https://github.com/itsindrajput/Timer.git
+cd react-timer-app
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+---
+
+## 💡 Learnings
+
+- Practical usage of `useRef` for DOM manipulation
+- Managing intervals with `useRef`
+- Building responsive components using CSS best practices
