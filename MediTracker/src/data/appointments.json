@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "doctor": "Dr. Smith",
+    "date": "2025-07-10",
+    "time": "10:00 AM"
+  },
+  {
+    "id": 2,
+    "doctor": "Dr. Brown",
+    "date": "2025-07-12",
+    "time": "2:00 PM"
+  }
+]
