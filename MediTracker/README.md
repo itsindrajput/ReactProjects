@@ -96,7 +96,7 @@ Visit: `http://localhost:5173`
 ## 🔗 Live Preview
 
 Check out the live demo of the project here:  
-👉 [**Medi Tracker – Live Preview**](https://your-live-url.netlify.app)
+👉 [**Medi Tracker – Live Preview**](https://meditracker-two.vercel.app/)
 
 ---
 
