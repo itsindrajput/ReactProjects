@@ -1,50 +1,78 @@
 import { useState } from "react";
-import InputField from "../components/InputField";
-import Button from "../components/Button";
+import styles from "./BookAppointment.module.css";
+import { FaCalendarPlus } from "react-icons/fa";
 
 const BookAppointment = () => {
   const [form, setForm] = useState({ doctor: "", date: "", time: "" });
 
-  const handleChange = (e) => {
+  const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!form.doctor || !form.date || !form.time) {
+      alert("Please fill out all fields!");
+      return;
+    }
     alert(
-      `Appointment booked with ${form.doctor} on ${form.date} at ${form.time}`
+      `✅ Appointment booked with ${form.doctor} on ${form.date} at ${form.time}`
     );
-    setForm({ doctor: "", date: "", time: "" });
   };
 
   return (
-    <div className="form-container">
-      <h2>Book an Appointment</h2>
-      <form onSubmit={handleSubmit}>
-        <InputField
-          label="Doctor's Name"
-          type="text"
-          name="doctor"
-          value={form.doctor}
-          onChange={handleChange}
-        />
-        <InputField
-          label="Date"
-          type="date"
-          name="date"
-          value={form.date}
-          onChange={handleChange}
-        />
-        <InputField
-          label="Time"
-          type="time"
-          name="time"
-          value={form.time}
-          onChange={handleChange}
-        />
-        <Button text="Book Now" />
-      </form>
+    <div className={`container mt-5 ${styles.wrapper}`}>
+      <div className={`p-4 shadow-sm ${styles.formCard}`}>
+        <h3 className="text-center mb-4 text-primary d-flex justify-content-center align-items-center gap-2">
+          <FaCalendarPlus size={24} /> Book Appointment
+        </h3>
+
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className={`form-label fw-semibold ${styles.label}`}>
+              Doctor
+            </label>
+            <select
+              className={`form-select ${styles.select}`}
+              name="doctor"
+              onChange={handleChange}
+              value={form.doctor}
+            >
+              <option value="">Select Doctor</option>
+              <option value="Dr. Smith">Dr. Smith</option>
+              <option value="Dr. John">Dr. John</option>
+            </select>
+          </div>
+          <div className="mb-3">
+            <label className={`form-label fw-semibold ${styles.label}`}>
+              Date
+            </label>
+            <input
+              type="date"
+              name="date"
+              className={`form-control ${styles.input}`}
+              onChange={handleChange}
+              value={form.date}
+            />
+          </div>
+          <div className="mb-3">
+            <label className={`form-label fw-semibold ${styles.label}`}>
+              Time
+            </label>
+            <input
+              type="time"
+              name="time"
+              className={`form-control ${styles.input}`}
+              onChange={handleChange}
+              value={form.time}
+            />
+          </div>
+          <button className="btn btn-success w-100 mt-3">
+            Book Appointment
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
+
 export default BookAppointment;

@@ -1,0 +1,25 @@
+.authContainer {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.authWrapper {
+  max-width: 450px;
+  margin: 60px auto;
+}
+
+.authCard {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+}
+
+@media (max-width: 576px) {
+  .authWrapper {
+    padding: 0 12px;
+  }
+}

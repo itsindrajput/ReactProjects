@@ -1,46 +1,71 @@
 import { useState } from "react";
-import InputField from "../components/InputField";
-import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
+import FormInput from "../components/FormInput/FormInput";
+import styles from "./AuthForm.module.css";
 
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
+  const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Dummy check: replace with actual auth logic
-    if (form.email === "test@mail.com" && form.password === "1234") {
+
+    if (!form.email || !form.password) {
+      alert("Please fill in both fields.");
+      return;
+    }
+
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (
+      storedUser &&
+      form.email === storedUser.email &&
+      form.password === storedUser.password
+    ) {
+      alert("✅ Login successful!");
       navigate("/dashboard");
     } else {
-      alert("Invalid credentials");
+      alert("❌ Invalid credentials!");
     }
   };
 
   return (
-    <div className="form-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <InputField
-          label="Email"
-          type="email"
-          name="email"
-          value={form.email}
-          onChange={handleChange}
-        />
-        <InputField
-          label="Password"
-          type="password"
-          name="password"
-          value={form.password}
-          onChange={handleChange}
-        />
-        <Button text="Login" />
-      </form>
+    <div className={`container ${styles.authWrapper}`}>
+      <div className={`p-4 shadow-sm ${styles.authCard}`}>
+        <h3 className="mb-4 text-center text-primary">🔐 Login</h3>
+        <form onSubmit={handleSubmit}>
+          <FormInput
+            label="Email"
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="you@example.com"
+          />
+          <FormInput
+            label="Password"
+            type="password"
+            name="password"
+            value={form.password}
+            onChange={handleChange}
+            placeholder="Enter password"
+          />
+          <button className="btn btn-success w-100 mt-3" type="submit">
+            Login
+          </button>
+        </form>
+
+        <button
+          type="button"
+          onClick={() => navigate("/register")}
+          className="btn btn-outline-primary w-100 mt-2"
+        >
+          Register
+        </button>
+      </div>
     </div>
   );
 };

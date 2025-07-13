@@ -1,0 +1,50 @@
+.wrapper {
+  max-width: 600px;
+  margin: auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+}
+
+.prescriptionItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  padding: 15px 10px;
+}
+
+.prescriptionItem:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  font-size: 1.6rem;
+  color: #0d6efd;
+}
+
+.medicine {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.dosage {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Responsive for small screens */
+@media (max-width: 576px) {
+  .prescriptionItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .icon {
+    font-size: 1.4rem;
+  }
+}

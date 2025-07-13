@@ -1,8 +1,8 @@
 import { useState } from "react";
-import InputField from "../components/InputField";
-import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
-import styles from "./Register.module.css";
+import { FaRegAddressCard } from "react-icons/fa";
+import FormInput from "../components/FormInput/FormInput";
+import styles from "./AuthForm.module.css";
 
 const Register = () => {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -14,37 +14,54 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Registered successfully!");
-    navigate("/");
+
+    if (!form.name || !form.email || !form.password) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    localStorage.setItem("user", JSON.stringify(form));
+    alert("✅ Registration successful!");
+    navigate("/dashboard");
   };
 
   return (
-    <div className={styles.formContainer}>
-      <h2 className={styles.heading}>Register</h2>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <InputField
-          label="Name"
-          type="text"
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-        />
-        <InputField
-          label="Email"
-          type="email"
-          name="email"
-          value={form.email}
-          onChange={handleChange}
-        />
-        <InputField
-          label="Password"
-          type="password"
-          name="password"
-          value={form.password}
-          onChange={handleChange}
-        />
-        <Button text="Register" />
-      </form>
+    <div className={`container ${styles.authWrapper}`}>
+      <div className={`p-4 shadow-sm ${styles.authCard}`}>
+        <h3 className="text-center text-primary mb-4 d-flex justify-content-center align-items-center gap-2">
+          <FaRegAddressCard size={26} /> <span>Register</span>
+        </h3>
+
+        <form onSubmit={handleSubmit}>
+          <FormInput
+            label="Full Name"
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="John Doe"
+          />
+          <FormInput
+            label="Email"
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="you@example.com"
+          />
+          <FormInput
+            label="Password"
+            type="password"
+            name="password"
+            value={form.password}
+            onChange={handleChange}
+            placeholder="Create a password"
+          />
+          <button className="btn btn-primary w-100 mt-3" type="submit">
+            Register
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

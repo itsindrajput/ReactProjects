@@ -1,0 +1,73 @@
+.wrapper {
+  max-width: 700px;
+  margin: auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+}
+
+.sectionHeading {
+  color: #343a40;
+}
+
+.appointmentList {
+  display: flex;
+  flex-direction: column;
+}
+
+.appointmentCard {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border-left: 5px solid #0d6efd;
+  transition: 0.3s ease;
+}
+
+.appointmentCard:hover {
+  background-color: #e9f2ff;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.time {
+  font-size: 0.95rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.iconTime {
+  color: #0d6efd;
+  font-size: 1.1rem;
+}
+
+.doctor {
+  font-size: 0.95rem;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.doctorIcon {
+  color: #198754;
+  font-size: 1.1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .card {
+    padding: 1.5rem 1rem;
+  }
+  .appointmentCard {
+    font-size: 0.95rem;
+  }
+}
