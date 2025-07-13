@@ -1,12 +1,109 @@
-# React + Vite
+# 🏥 Patient Medicine & Appointment Tracking System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and modern frontend web application built with **React.js**, **React Router**, **Bootstrap**, and **CSS Modules**. This system allows patients to:
 
-Currently, two official plugins are available:
+- Register & log in
+- View upcoming appointments
+- Book new appointments
+- Check their prescriptions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ **User Registration & Login** with localStorage
+- 📆 **Book Appointments** by selecting doctor, date, and time
+- 💊 **View Prescriptions** in a clean card layout
+- 🧾 **Dashboard** with personalized greetings and upcoming appointments
+- 🔀 **React Router** navigation
+- 🎨 Styled with **Bootstrap** and **CSS Modules**
+- 📱 Fully **Responsive** design
+- ⚙️ Modular, reusable, and clean codebase
+
+---
+
+## 🧱 Tech Stack
+
+| Technology   | Purpose                         |
+| ------------ | ------------------------------- |
+| React        | Frontend Framework              |
+| React Router | Routing between views/pages     |
+| Bootstrap    | UI Framework for styling        |
+| CSS Modules  | Scoped and modular CSS          |
+| React Icons  | Clean icon integration          |
+| localStorage | Simulated authentication & data |
+
+---
+
+## 📁 Project Structure
+
+```
+
+src/
+├── assets/
+├── components/
+│   └── Button/
+│       └── Button.jsx
+│       └── Button.module.css
+│   └── FormInput/
+│       └── FormInput.jsx
+│       └── FormInput.module.css
+│   └── Navbar/
+│       └── Navbar.jsx
+│       └── Navbar.module.css
+├── pages/
+│   ├── AuthForm.module.css
+│   ├── BookAppointment.jsx
+|   ├── BookAppointment.module.css
+│   ├── Dashboard.jsx
+|   ├── Dashboard.module.css
+│   ├── Login.jsx
+│   ├── Prescriptions.jsx
+|   ├── Prescriptions.module.css
+│   ├── Register.jsx
+├── App.jsx
+└── main.jsx
+
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/itsindrajput/ReactProjects/MediTracker.git
+cd MEDITRACKER
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the Development Server
+
+```bash
+npm run dev
+```
+
+Visit: `http://localhost:5173`
+
+---
+
+## 🔗 Live Preview
+
+Check out the live demo of the project here:  
+👉 [**Medi Tracker – Live Preview**](https://your-live-url.netlify.app)
+
+---
+
+## 🙌 Future Improvements
+
+- 🔐 JWT-based Authentication
+- ☁️ Backend integration with APIs
+- 🗓 Appointment cancellation/rescheduling
+- 📄 Downloadable prescriptions (PDF)
+- 🌍 Multi-language support
