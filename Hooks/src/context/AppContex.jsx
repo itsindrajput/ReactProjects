@@ -1,5 +1,4 @@
 import { createContext } from "react";
-
 export const AppContext = createContext();
 
 const ContextProvider = (props) => {
@@ -14,3 +13,5 @@ const ContextProvider = (props) => {
 };
 
 export default ContextProvider;
+
+//Step 1: Creating/Defining The Contex inside a context folder in src.

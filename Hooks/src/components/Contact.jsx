@@ -13,5 +13,6 @@ const Contact = () => {
     </div>
   );
 };
-
 export default Contact;
+
+//Step 3: Consuming The Contex

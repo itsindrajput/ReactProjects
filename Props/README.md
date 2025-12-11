@@ -1,16 +1,23 @@
-# React + Vite
+Product Listing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Note 1:  https://dummyjson.com/products (Getting products)
+Note 2: https://dummyjson.com/products/search?q=${quary} (Search Products)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Basic Input Validation
+Task: Implement a search functionality where users can search for products. Validate that the input is not empty or invalid.
+Example: "Create a search bar to allow users to search for products by name. Ensure the search field cannot be empty."
+2. Listing Product
+Task: Fetch and display products using the API. Each product should show its name, title, price, and image.
+Example: "Using the provided API, display a list of products with their name, title, price, and image."
+3. Sorting (Client side based on price and rating)
+Task: Implement sorting functionality to allow sorting by price (ascending/descending).
+Example: "Add sorting options that allow users to sort the products by price."
+4. Creating Product Card
+Task: Display each product's details in a neatly styled product card that includes an image, title, name, and price.
+Example: "Create a visually appealing product card layout that shows the product image, name, title, and price."
+5. PRO FEATURE (Optional)
+Task: Add a filter to allow users to filter products by brand or price range.
+Example: "Add a filter option to allow users to view products within a specific price range or brand."
+6. PRO FEATURE (Optional)
+Task: Implement pagination to limit the number of products shown per page.
+Example: "Implement pagination to display a limited number of products per page, with navigation to go between pages."

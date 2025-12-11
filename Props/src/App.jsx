@@ -1,24 +1,23 @@
-import React from "react";
-import Header from "./components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ResponsiveAppBar from "./components/ResponsiveAppBar";
+import BottomNavigation from "./components/BottomNavigation";
+import FetchData from "./components/FetchData";
+import Contact from "./components/Contact";
 import Profile from "./components/Profile";
-import Footer from "./components/Footer";
-
-const userData = {
-  name: "John Doe",
-  age: 30,
-  email: "john@gmail.com",
-};
 
 const App = () => {
   return (
-    <>
+    <Router>
       <div>
-        <Header />
-        <h2>Welcome to my React App</h2>
-        <Profile user={userData} />
-        <Footer />
+        <ResponsiveAppBar />
+        <Routes>
+          <Route path="/" element={<FetchData />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+        <BottomNavigation />
       </div>
-    </>
+    </Router>
   );
 };
 export default App;
